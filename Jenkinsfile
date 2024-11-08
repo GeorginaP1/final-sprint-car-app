@@ -28,7 +28,7 @@ pipeline {
 
                     // Clone repo1 into a temporary directory
 
-                    dir('frontend_temp') {
+                    dir('frontend') {
 
                         git branch: 'main', url: 'https://github.com/GeorginaP1/lbg-car-react-starter.git'
 
@@ -61,29 +61,6 @@ pipeline {
                     // Copy backend into a subdirectory within the third repository
 
                     // sh 'cp -r backend_temp/* backend/'
-
-                }
-
-            }
-
-        }
- 
- 
-        stage('Commit and Push Changes') {
-
-            steps {
-
-                script {
-
-                    // Commit the changes
-
-                    sh 'git add .'
-
-                    sh 'git commit -m "Added frontend and backend contents to respective subdirectories"'
- 
-                    // Push the changes back to the third repository
-
-                    sh 'git push origin main'
 
                 }
 

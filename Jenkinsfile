@@ -36,7 +36,7 @@ pipeline {
 
                     // Copy frontend into a subdirectory within the third repository
 
-                    sh 'cp -r frontend_temp/* frontend/'
+                    // sh 'cp -r frontend_temp/* frontend/'
 
                 }
 
@@ -60,7 +60,7 @@ pipeline {
 
                     // Copy backend into a subdirectory within the third repository
 
-                    sh 'cp -r backend_temp/* backend/'
+                    // sh 'cp -r backend_temp/* backend/'
 
                 }
 
